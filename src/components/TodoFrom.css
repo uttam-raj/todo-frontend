@@ -1,0 +1,74 @@
+.Todo-Form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  background: #ffffff;
+  padding: 1.2rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  max-width: 100rem;
+  margin: 0 auto 2rem auto; /* centered */
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Inputs & Select */
+.Todo-Form input[type="text"],
+.Todo-Form input[type="date"],
+.Todo-Form select {
+  padding: 0.7rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  flex: 1;
+  min-width: 150px;
+  max-width: 500px;
+}
+
+/* Button */
+.Todo-Form button {
+  background-color: #a777e3;
+  color: white;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.Todo-Form button:hover {
+  background-color: #3f9072;
+}
+
+/* ===== Task Section Wrapper ===== */
+.myUnorderedList {
+  max-width: 105rem;
+  margin: 0 auto;
+  padding-bottom: 3rem;
+}
+
+/* ===== Responsive Fixes ===== */
+@media screen and (max-width: 1024px) {
+  .Todo-Form {
+    margin: 0 2rem 2rem 2rem; /* margin on both sides */
+    gap: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .Todo-Form {
+    flex-direction: column;
+    align-items: stretch;
+    margin: 0 1.5rem 2rem 1.5rem; /* margin left/right */
+    gap: 1rem;
+  }
+
+  .Todo-Form input[type="text"],
+  .Todo-Form input[type="date"],
+  .Todo-Form select,
+  .Todo-Form button {
+    width: 100%; /* take full width */
+    max-width: 100%;
+  }
+}

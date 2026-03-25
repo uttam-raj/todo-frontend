@@ -1,0 +1,104 @@
+/* ResetPassword.css */
+
+/* Wrapper */
+.reset-auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  padding: 20px;
+}
+
+/* Form */
+.reset-auth-container .reset-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  padding: 30px 25px;
+  border-radius: 15px;
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 380px;
+  text-align: center;
+}
+
+/* Heading */
+.reset-auth-container .reset-form h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+/* Input fields */
+.reset-auth-container .reset-form input[type="text"],
+.reset-auth-container .reset-form input[type="password"] {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.reset-auth-container .reset-form input[type="text"]:focus,
+.reset-auth-container .reset-form input[type="password"]:focus {
+  border-color: #6e8efb;
+  box-shadow: 0px 0px 6px rgba(110, 142, 251, 0.6);
+}
+
+/* Error / Success text */
+.reset-auth-container .error-text {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.reset-auth-container .success-text {
+  color: green;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* Button */
+.reset-auth-container .reset-form button {
+  width: 100%;
+  padding: 12px 14px;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.reset-auth-container .reset-form button:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #5a7dfb, #945ee0);
+}
+
+.reset-auth-container .reset-form button:active {
+  transform: scale(0.97);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .reset-auth-container .reset-form {
+    padding: 20px 15px;
+    max-width: 90%;
+  }
+
+  .reset-auth-container .reset-form h2 {
+    font-size: 20px;
+  }
+
+  .reset-auth-container .reset-form input,
+  .reset-auth-container .reset-form button {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
