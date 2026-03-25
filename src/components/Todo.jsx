@@ -63,7 +63,7 @@ export const Todo=()=>{
    useEffect(()=>{
     const fetchTodos = async()=>{
       try {
-        const response = await fetch(`http://localhost:3000/api/todo?search=${searchTerm}&filter=${filterCategory}`,{
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/todo?search=${searchTerm}&filter=${filterCategory}`,{
           headers:{
             Authorization:`Bearer ${token}`,
           },
@@ -92,7 +92,7 @@ export const Todo=()=>{
   if(!content) return; // Avoid adding empty tasks
 
     try {
-      const response = await fetch("http://localhost:3000/api/todo",{
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/todo`,{
         method:"POST",
         headers:{
           "Content-Type":"application/json",
@@ -115,7 +115,7 @@ export const Todo=()=>{
 const handleDeleteClick= async(id)=>{
 
     try {
-      const response = await fetch(`http://localhost:3000/api/todo/${id}`,{
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/todo/${id}`,{
         method:"DELETE",
         headers:{
           Authorization:`Bearer ${token}`,
@@ -141,7 +141,7 @@ const handleCheckedClick=async(id)=>{
   // console.log("Sending toggle request for ID:", id);
   // console.log("With token:", token);
   try {
-    const response = await fetch(`http://localhost:3000/api/todo/${id}/toggle`,{
+    const response = await fetch(`${import.meta.env.VITE_API_URL}/todo/${id}/toggle`,{
       method:"PATCH",
       headers:{
         Authorization:`Bearer ${token}`,
@@ -177,7 +177,7 @@ const handleDragEnd = (event) => {
 
       // Send updated order to backend
   const orderedIds = newTaskOrder.map(task => task._id);
-  fetch("http://localhost:3000/api/todo/update-order", {
+  fetch(`${import.meta.env.VITE_API_URL}/todo/update-order`, {
     method: "PATCH",
     headers: {
       "Content-Type": "application/json",

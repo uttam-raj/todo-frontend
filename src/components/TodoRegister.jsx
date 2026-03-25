@@ -44,7 +44,7 @@ export const TodoRegister =()=>{
         const { confirmpassword: _, ...sendData } = userReg;  //This line remove the confirmpassword to send in the backend
 
         try {
-            const response =await fetch(`http://localhost:3000/api/auth/register`,
+            const response =await fetch(`${import.meta.env.VITE_API_URL}/auth/register`,
                 {
                     method:"POST",
                     headers: {
