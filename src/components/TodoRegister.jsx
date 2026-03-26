@@ -8,7 +8,7 @@ import { toast } from "react-toastify";
 export const TodoRegister =()=>{
     const [userReg,setUserReg] = useState({
         name:"",
-        gender:"Select gender",
+        gender:"",
         email:"",
         phone:"",
         password:"",
@@ -43,6 +43,9 @@ export const TodoRegister =()=>{
         // Don't send confirmpassword to backend
         const { confirmpassword: _, ...sendData } = userReg;  //This line remove the confirmpassword to send in the backend
 
+        console.log("Sending Data:", sendData);
+
+
         try {
             const response =await fetch(`${import.meta.env.VITE_API_URL}/auth/register`,
                 {
@@ -68,7 +71,7 @@ export const TodoRegister =()=>{
 
                     setUserReg({
                         name:"",
-                        gender:"Select gender",
+                        gender:"",
                         email:"",
                         phone:"",
                         password:"",
@@ -99,7 +102,7 @@ export const TodoRegister =()=>{
 
             <div className="input-group">
             <i className="bx bx-male"></i>
-            <select name="gender" onChange={handleChange}>
+            <select name="gender" value={userReg.gender} onChange={handleChange}>
                 <option value="">Select gender</option>
                 <option value="male">Male</option>
                 <option value="female">Female</option>
