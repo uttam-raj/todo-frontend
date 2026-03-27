@@ -353,27 +353,3 @@
   }
 }
 
-
-/* =========================
-   LIGHT MODE FIX
-========================= */
-body.light .search-input {
-  color: #000;                 /* TEXT BLACK */
-  background: rgba(255, 255, 255, 0.9);
-}
-
-body.light .search-input::placeholder {
-  color: #555;
-}
-
-/* Dropdown selected value */
-body.light .filter-dropdown {
-  color: #000;                 /* SELECTED TEXT BLACK */
-  background-color: rgba(255, 255, 255, 0.9);
-}
-
-/* Dropdown options */
-body.light .filter-dropdown option {
-  color: #000;
-  background-color: #fff;
-}
