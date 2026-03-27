@@ -18,7 +18,7 @@ const Profile = () => {
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const res = await fetch(`${API}/api/settings/profile`, {
+        const res = await fetch(`${API}/settings/profile`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         const data = await res.json();
@@ -38,7 +38,7 @@ const Profile = () => {
   // Save updated field
   const handleEdit = async (field, value) => {
     try {
-      const res = await fetch(`${API}/api/settings/profile`, {
+      const res = await fetch(`${API}/settings/profile`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -74,7 +74,7 @@ const Profile = () => {
   // Delete account
   const deleteAccount = async () => {
     try {
-      const res = await fetch(`${API}/api/settings/delete`, {
+      const res = await fetch(`${API}/settings/delete`, {
         method: "DELETE",
         headers: { Authorization: `Bearer ${token}` },
       });
